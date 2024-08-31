@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Quiz Game</div>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+                <li><a href="game.html">Quiz</a></li>
+                <li><a href="newsandservices.html">News & Services</a></li>
+            </ul>
+            <input type="text" id="search-bar" placeholder="Search...">
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div id="hero-content">
+                <h1>Welcome to the Quiz Game!</h1>
+                <p>Test your knowledge and see if you can score a perfect 10!</p>
+                <div class="hero-image">
+                    <img src="images/solar 3.jpg" alt="Quiz Hero">
+                </div>
+            </div>
+        </section>
+
+        <section id="quiz">
+            <h1>Quiz Questions</h1>
+            <form id="quiz-form">
+                <!-- Question 1 -->
+                <div class="question">
+                    <h3>1. What is the primary component of a solar panel?</h3>
+                    <input type="radio" id="q1a" name="q1" value="a">
+                    <label for="q1a">Silicon</label><br>
+                    <input type="radio" id="q1b" name="q1" value="b">
+                    <label for="q1b">Copper</label><br>
+                    <input type="radio" id="q1c" name="q1" value="c">
+                    <label for="q1c">Aluminum</label>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question">
+                    <h3>2. What is the function of a solar inverter?</h3>
+                    <input type="radio" id="q2a" name="q2" value="a">
+                    <label for="q2a">Convert DC to AC</label><br>
+                    <input type="radio" id="q2b" name="q2" value="b">
+                    <label for="q2b">Store solar energy</label><br>
+                    <input type="radio" id="q2c" name="q2" value="c">
+                    <label for="q2c">Track the sun’s movement</label>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question">
+                    <h3>3. What is the main benefit of solar panel maintenance?</h3>
+                    <input type="radio" id="q3a" name="q3" value="a">
+                    <label for="q3a">Increase efficiency</label><br>
+                    <input type="radio" id="q3b" name="q3" value="b">
+                    <label for="q3b">Reduce installation cost</label><br>
+                    <input type="radio" id="q3c" name="q3" value="c">
+                    <label for="q3c">Decrease system lifespan</label>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question">
+                    <h3>4. What should be checked regularly during solar panel maintenance?</h3>
+                    <input type="radio" id="q4a" name="q4" value="a">
+                    <label for="q4a">Panel orientation</label><br>
+                    <input type="radio" id="q4b" name="q4" value="b">
+                    <label for="q4b">Inverter status</label><br>
+                    <input type="radio" id="q4c" name="q4" value="c">
+                    <label for="q4c">Roof color</label>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question">
+                    <h3>5. How often should solar panels be cleaned?</h3>
+                    <input type="radio" id="q5a" name="q5" value="a">
+                    <label for="q5a">Every month</label><br>
+                    <input type="radio" id="q5b" name="q5" value="b">
+                    <label for="q5b">Every 6-12 months</label><br>
+                    <input type="radio" id="q5c" name="q5" value="c">
+                    <label for="q5c">Every 2 years</label>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question">
+                    <h3>6. How can solar projects, such as those from Tabsa, help mitigate load shedding?</h3>
+                    <input type="radio" id="q6a" name="q6" value="a">
+                    <label for="q6a">By reducing the overall demand on the grid through distributed solar generation</label><br>
+                    <input type="radio" id="q6b" name="q6" value="b">
+                    <label for="q6b">By increasing the load on the grid during peak hours</label><br>
+                    <input type="radio" id="q6c" name="q6" value="c">
+                    <label for="q6c">By providing backup power only during emergencies</label>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="question">
+                    <h3>7. What role do battery storage systems play in solar energy projects addressing load shedding?</h3>
+                    <input type="radio" id="q7a" name="q7" value="a">
+                    <label for="q7a">They store excess solar energy for use during grid outages</label><br>
+                    <input type="radio" id="q7b" name="q7" value="b">
+                    <label for="q7b">They increase the efficiency of solar panels</label><br>
+                    <input type="radio" id="q7c" name="q7" value="c">
+                    <label for="q7c">They reduce the initial cost of solar installations</label>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="question">
+                    <h3>8. How does integrating solar power with smart grid technology benefit load management?</h3>
+                    <input type="radio" id="q8a" name="q8" value="a">
+                    <label for="q8a">It allows for real-time monitoring and management of energy usage</label><br>
+                    <input type="radio" id="q8b" name="q8" value="b">
+                    <label for="q8b">It increases the physical size of solar panels</label><br>
+                    <input type="radio" id="q8c" name="q8" value="c">
+                    <label for="q8c">It reduces the lifespan of solar panels</label>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="question">
+                    <h3>9. What is one way Tabsa’s solar solutions can enhance energy security in areas prone to load shedding?</h3>
+                    <input type="radio" id="q9a" name="q9" value="a">
+                    <label for="q9a">By providing decentralized power sources that are less dependent on the main grid</label><br>
+                    <input type="radio" id="q9b" name="q9" value="b">
+                    <label for="q9b">By decreasing the capacity of the main grid</label><br>
+                    <input type="radio" id="q9c" name="q9" value="c">
+                    <label for="q9c">By focusing solely on traditional energy sources</label>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="question">
+                    <h3>10. What advantage does solar energy offer in the context of frequent load shedding events?</h3>
+                    <input type="radio" id="q10a" name="q10" value="a">
+                    <label for="q10a">It provides a reliable and consistent source of energy during grid outages</label><br>
+                    <input type="radio" id="q10b" name="q10" value="b">
+                    <label for="q10b">It increases dependence on fossil fuels</label><br>
+                    <input type="radio" id="q10c" name="q10" value="c">
+                    <label for="q10c">It relies on external energy sources</label>
+                </div>
+
+                <button id="submit-quiz" type="button">Submit Quiz</button>
+                <div id="quiz-result"></div>
+            </form>
+
+            <!-- Result display -->
+            <div id="result">
+                <div class="winner">
+                    <div class="message">Congratulations! You won!</div>
+                </div>
+                <div class="loser">
+                    <div class="message">Sorry, you lost. Try again! Or you need TABSA to give you more knowledge</div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/UsoFsWb3X8HdDLxw/?mibextid=LQQJ4d" target="_blank" class="social-icon facebook-icon"></a>
+                    <a href="https://www.instagram.com/tabsaprojects?igsh=MXN0cWt4eW9hMzc0dA==" target="_blank" class="social-icon instagram-icon"></a>
+                </div>
+                <div class="copyright">
+                    &copy; 2024 Tab=SA Projects. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+
+        <!-- Chatbot Integration -->
+        <div id="chatbot">
+            <p>Chat with us! <a href="javascript:void(0);" onclick="openChatbot()">Click here</a> to start a chat.</p>
+            <!-- Your chatbot script or iframe can be inserted here -->
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

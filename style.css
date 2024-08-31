@@ -1,0 +1,561 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #003333;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    color: #fff;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 1.5em;
+    color: #00bfff;
+    margin-bottom: 10px;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav a {
+    color: #00bfff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #b6f1f1;
+    text-decoration: underline;
+}
+
+#search-bar {
+    padding: 5px;
+    border: 1px solid #00bfff;
+    border-radius: 5px;
+    width: 200px;
+    margin-top: 10px;
+}
+
+/* Hero Section */
+#hero {
+    padding: 100px 20px 20px;
+    text-align: center;
+    background: url('images/background-watermark.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #1ad4ec;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+.hero-image {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 5px solid #68cadb;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s;
+}
+
+.hero-image:hover img {
+    transform: rotateX(-5deg) rotateY(5deg);
+}
+
+#hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.8), rgba(0, 191, 255, 0.8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin: 0 auto;
+    max-width: 800px;
+    line-height: 1.6;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/background-watermark.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    transform: translateZ(-1px) scale(1.5);
+    filter: blur(5px);
+}
+
+#hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* About Us Section */
+#about {
+    padding: 60px 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.ceo-profile, .company-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #00bfff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    background-color: #111;
+    transform: rotateX(5deg) rotateY(-5deg);
+    transition: transform 0.5s;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.ceo-profile:hover, .company-info:hover {
+    transform: rotateX(0deg) rotateY(0deg);
+}
+
+.ceo-image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2 {
+    color: #00bfff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #003333;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+footer .social-links a {
+    color: #e4e9eb;
+    text-decoration: none;
+}
+
+footer .social-links a:hover {
+    color: #b4e0e0;
+}
+
+footer .copyright {
+    margin-top: 10px;
+}
+
+/* Button Effects */
+button {
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Moving Background */
+#background {
+    position: relative;
+    height: 300px;
+    background: url('images/solar 3.jpg') no-repeat center center;
+    background-size: cover;
+    animation: moveBackground 20s linear infinite;
+    overflow: hidden;
+}
+
+@keyframes moveBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+/* Social Icons */
+.social-icon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-size: cover;
+    margin: 0 5px;
+}
+
+.facebook-icon {
+    background-image: url('images/facebook-3d-icon.png');
+}
+
+.instagram-icon {
+    background-image: url('images/instagram-3d-icon.png');
+}
+
+/* Contact Us Page */
+#contact {
+    padding: 60px 20px;
+    background-color: #5d8a8d;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact-form, .contact-info, .map {
+    flex: 1;
+    min-width: 300px;
+    box-sizing: border-box;
+}
+
+.contact-form {
+    background-color: #003333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #00bfff;
+    margin-bottom: 10px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #00bfff;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #007bff;
+}
+
+/* Quiz Section */
+#quiz {
+    padding: 60px 20px;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+}
+
+#quiz h1 {
+    color: #00bfff;
+    margin-bottom: 20px;
+}
+
+#quiz-form {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.question h3 {
+    color: #00bfff;
+    margin-bottom: 10px;
+}
+
+.question input[type="radio"] {
+    margin-right: 10px;
+}
+
+#quiz-form button {
+    padding: 10px 20px;
+    background-color: #00bfff;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#quiz-form button:hover {
+    background-color: #007bff;
+}
+
+/* Result Section */
+#result {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+}
+
+.winner, .loser {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.winner .message, .loser .message {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-align: center;
+    transform: rotateX(0);
+    transition: transform 1s ease;
+}
+
+.winner .message {
+    background: linear-gradient(45deg, #4CAF50, #8BC34A);
+}
+
+.loser .message {
+    background: linear-gradient(45deg, #F44336, #FF5722);
+}
+
+.winner.active .message, .loser.active .message {
+    transform: rotateX(360deg);
+}
+
+/* News Section Styles */
+#news {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.news-item {
+    margin-bottom: 20px;
+}
+
+.news-box {
+    background-color: #0a0a0a;
+    border: 1px solid #77e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.news-box h2 {
+    margin-top: 0;
+}
+
+.like-box {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.like-box:hover {
+    background-color: #45a049;
+}
+
+/* Gallery Section */
+#gallery {
+    padding: 60px 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+.gallery-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery-item {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border: 2px solid #00bfff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Ensure the carousel displays items in a grid-like fashion */
+.gallery-carousel .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .gallery-item {
+        width: 250px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        width: 200px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        width: 150px;
+        height: 100px;
+    }
+}
+
+/* Chatbot */
+#chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007bff;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 1000;
+}
+
+#chatbot a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+
+
